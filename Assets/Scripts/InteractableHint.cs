@@ -19,7 +19,6 @@ public class InteractableHint : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("door");
         hint.SetActive(true);
     }
 
