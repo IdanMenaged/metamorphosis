@@ -36,7 +36,7 @@ public class Door : MonoBehaviour
             
             sfx.Play();
 
-            hint.SetActive(false);
+            Destroy(hint);
         }
     }
 
