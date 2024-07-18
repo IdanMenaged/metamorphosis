@@ -1,0 +1,4 @@
+Mother|Darling
+Mother|Are you awake?
+Mother|You sound sick
+Mother|Are you okay?

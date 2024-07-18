@@ -6,10 +6,9 @@ using UnityEngine.InputSystem;
 public class Door : MonoBehaviour
 {
     public InputActionAsset actions;
-    public Sprite openSprite;
 
     private bool inRange = false;
-    private SpriteRenderer renderer;
+    private Animator anim;
     private AudioSource sfx;
     private GameObject hint;
     
@@ -18,7 +17,9 @@ public class Door : MonoBehaviour
     {
         actions.FindActionMap("Main").FindAction("Interact").performed += OnInteract;
 
-        renderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
+        anim.enabled = true;
+
         sfx = transform.Find("SFX").GetComponent<AudioSource>();
         hint = transform.Find("Hint").gameObject;
     }
@@ -31,11 +32,8 @@ public class Door : MonoBehaviour
 
     private void OnInteract(InputAction.CallbackContext context) {
         if (inRange) {
-            renderer.sprite = openSprite;
-            transform.localScale = new Vector3(.46f, .53f, 0); // resize the sprite
-            
             sfx.Play();
-
+            anim.SetTrigger("Door Opening");
             Destroy(hint);
         }
     }
