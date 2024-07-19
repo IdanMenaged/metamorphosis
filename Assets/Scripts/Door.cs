@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
+using UnityEditor.SearchService;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
     public InputActionAsset actions;
+    public string leadsTo;
 
     private bool inRange = false;
     private Animator anim;
@@ -24,18 +29,16 @@ public class Door : MonoBehaviour
         hint = transform.Find("Hint").gameObject;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnInteract(InputAction.CallbackContext context) {
         if (inRange) {
             sfx.Play();
             anim.SetTrigger("Door Opening");
             Destroy(hint);
         }
+    }
+
+    public void Transition() {
+        SceneManager.LoadScene(leadsTo);
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
