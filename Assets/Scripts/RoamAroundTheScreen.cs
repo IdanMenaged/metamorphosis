@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RoamAroundTheScreen : MonoBehaviour
@@ -11,6 +10,7 @@ public class RoamAroundTheScreen : MonoBehaviour
     private Vector3 minPos;
     private Vector3 maxPos;
     private Vector3 target;
+    private bool currentlyIdle = true;
     
     // Start is called before the first frame update
     void Start()
@@ -26,6 +26,7 @@ public class RoamAroundTheScreen : MonoBehaviour
     void Update()
     {
         if (transform.position == target) {
+            currentlyIdle = true;
             StartCoroutine(NewTarget());
         }
         else {
@@ -35,11 +36,19 @@ public class RoamAroundTheScreen : MonoBehaviour
 
     IEnumerator NewTarget() {
         yield return new WaitForSeconds(stayInPlaceTime);
-        target = new Vector3(Random.Range(minPos.x, maxPos.x), Random.Range(minPos.y, maxPos.y), 0);
+        if (currentlyIdle) {
+            currentlyIdle = false;
+            target = RandomPos();
+        }
     }
 
     IEnumerator InitialTarget() {
         yield return new WaitForSeconds(startDelay);
-        target = new Vector3(Random.Range(minPos.x, maxPos.x), Random.Range(minPos.y, maxPos.y), 0);
+        target = RandomPos();
+    }
+
+    Vector3 RandomPos() {
+        Vector3 candidate = new Vector3(Random.Range(minPos.x, maxPos.x), Random.Range(minPos.y, maxPos.y), 0);
+        return candidate;
     }
 }

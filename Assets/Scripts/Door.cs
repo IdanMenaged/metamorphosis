@@ -1,8 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEditor.SearchService;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -10,12 +5,12 @@ using UnityEngine.SceneManagement;
 public class Door : MonoBehaviour
 {
     public InputActionAsset actions;
-    public string leadsTo;
 
     private bool inRange = false;
     private Animator anim;
     private AudioSource sfx;
     private GameObject hint;
+    private SceneTransition overlay;
     
     // Start is called before the first frame update
     void Start()
@@ -27,6 +22,8 @@ public class Door : MonoBehaviour
 
         sfx = transform.Find("SFX").GetComponent<AudioSource>();
         hint = transform.Find("Hint").gameObject;
+
+        overlay = GameObject.Find("Scene Transition").GetComponent<SceneTransition>();
     }
 
     private void OnInteract(InputAction.CallbackContext context) {
@@ -38,7 +35,7 @@ public class Door : MonoBehaviour
     }
 
     public void Transition() {
-        SceneManager.LoadScene(leadsTo);
+        overlay.AnimationAndTransition();
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

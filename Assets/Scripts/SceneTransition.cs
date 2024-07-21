@@ -5,7 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour
 {
-    public void Transition(string scene) {
-        SceneManager.LoadScene(scene);
+    private Animator anim;
+
+    private void Start() {
+        anim = GetComponent<Animator>();
+    }
+    public void AnimationAndTransition() {
+        anim.SetTrigger("End Of Scene");
+    }
+
+    private void NextScene() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
