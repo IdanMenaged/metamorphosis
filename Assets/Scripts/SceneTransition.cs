@@ -14,7 +14,15 @@ public class SceneTransition : MonoBehaviour
         anim.SetTrigger("End Of Scene");
     }
 
+    public void AnimationAndRestart() {
+        anim.SetTrigger("Restart");
+    }
+
     private void NextScene() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    private void Restart() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

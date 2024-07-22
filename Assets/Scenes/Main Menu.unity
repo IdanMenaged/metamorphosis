@@ -564,58 +564,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &553908569
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 553908570}
-  - component: {fileID: 553908571}
-  m_Layer: 0
-  m_Name: Cockroach Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &553908570
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553908569}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.23104501, y: 5.92, z: 0.94830775}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &553908571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553908569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 618f76284c8004363ba62272bda0c645, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amount: 20
-  prefab: {fileID: 6646528702662556385, guid: 9a0b52eed0c1affcfa075f3b2f8edc23, type: 3}
-  minSpeed: 1
-  maxSpeed: 6
-  minStayInPlaceTime: 1
-  maxStayInPlaceTime: 4
-  minStartDelay: 0
-  maxStartDelay: 4
 --- !u!1 &1124101660
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,6 +1514,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b472bc9b2a22bd46bf64133ad5d400b, type: 3}
+--- !u!1001 &8817279058898596151
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5442089458375972567, guid: 13a96c35a4a750cd4bca2b2a78d6707e, type: 3}
+      propertyPath: m_Name
+      value: Cockroach Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794499803352366342, guid: 13a96c35a4a750cd4bca2b2a78d6707e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.23104501
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794499803352366342, guid: 13a96c35a4a750cd4bca2b2a78d6707e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794499803352366342, guid: 13a96c35a4a750cd4bca2b2a78d6707e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.94830775
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794499803352366342, guid: 13a96c35a4a750cd4bca2b2a78d6707e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794499803352366342, guid: 13a96c35a4a750cd4bca2b2a78d6707e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794499803352366342, guid: 13a96c35a4a750cd4bca2b2a78d6707e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794499803352366342, guid: 13a96c35a4a750cd4bca2b2a78d6707e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794499803352366342, guid: 13a96c35a4a750cd4bca2b2a78d6707e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794499803352366342, guid: 13a96c35a4a750cd4bca2b2a78d6707e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794499803352366342, guid: 13a96c35a4a750cd4bca2b2a78d6707e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 13a96c35a4a750cd4bca2b2a78d6707e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1576,4 +1581,4 @@ SceneRoots:
   - {fileID: 219063414}
   - {fileID: 485314549}
   - {fileID: 1156078743}
-  - {fileID: 553908570}
+  - {fileID: 8817279058898596151}

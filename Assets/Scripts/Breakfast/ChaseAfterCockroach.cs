@@ -34,6 +34,13 @@ public class ChaseAfterCockroach : MonoBehaviour
         renderer.sprite = sprite;
         anim.enabled = false;
         hands.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1); // inc opacity
+        hands.GetComponent<BoxCollider2D>().enabled = true;
         chasing = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.CompareTag("Player") && chasing) {
+            hands.GetComponent<Animator>().SetTrigger("In Range");
+        }
     }
 }

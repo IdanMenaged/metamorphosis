@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 2923764270214337983}
   - component: {fileID: 2327115426288666453}
   - component: {fileID: 4773053625526763631}
+  - component: {fileID: 1709600936016632883}
   m_Layer: 0
   m_Name: Cockroach
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4faf1d48f11d27c2fb7ab5db52f7e276, type: 3}
+  m_Sprite: {fileID: 73293059, guid: 4faf1d48f11d27c2fb7ab5db52f7e276, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -269,3 +270,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1709600936016632883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6011572915646613268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c1be2126454930e18de32e8e09baa1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneTransition: {fileID: 0}
+  deadSprite: {fileID: -733967824, guid: 4faf1d48f11d27c2fb7ab5db52f7e276, type: 3}
